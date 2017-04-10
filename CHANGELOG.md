@@ -3,6 +3,7 @@
 ## 2.0.3
 
 - Fixes issue with `aqueduct document` for routes using `listen`
+- CLI tools print tool version, project version (when applicable)
 
 ## 2.0.2
 
