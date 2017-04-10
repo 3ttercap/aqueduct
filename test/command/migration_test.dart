@@ -452,8 +452,16 @@ Future<int> runAqueductProcess(
   return cmd.process(results);
 }
 
-class MockMigratable extends CLIDatabaseMigratable {
+class MockMigratable extends CLICommand with CLIDatabaseMigratable, CLIProject {
   MockMigratable(this.projectDirectory);
   Directory projectDirectory;
-  ArgResults values;
+
+  @override
+  Future<int> handle() async => 0;
+
+  @override
+  String get description => "";
+
+  @override
+  String get name => "";
 }
